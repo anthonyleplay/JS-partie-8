@@ -10,7 +10,7 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-    <a class="navbar-brand" href="#">J. De la Fontaine</a>
+    <a class="navbar-brand px-2" href="#">J. De la Fontaine</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -226,39 +226,67 @@
 
   <script>
     var navArray = document.getElementsByTagName("a");
-    console.log(document.documentElement.scrollTop)
-    navArray[0].addEventListener("click",  functionMove0);
-    navArray[1].addEventListener("click",  functionMove1);
-    navArray[2].addEventListener("click",  functionMove2);
-    navArray[3].addEventListener("click",  functionMove3);
-    navArray[4].addEventListener("click",  functionMove4);
-    navArray[5].addEventListener("click",  functionMove5);
 
-    function functionMove0() {
-          navArray[0].href="#0"
-          window.scrollTo({ top: 0, behavior: 'smooth'});
-    }
-    function functionMove1() {
-      navArray[1].href="#1"
-          window.scrollTo({ top: 100, behavior: 'smooth'});
-    }
-    function functionMove2() {
-      navArray[2].href="#2"
-          window.scrollTo({ top: 678, behavior: 'smooth'});
-          }
-    function functionMove3() {
-      navArray[3].href="#3"
-          window.scrollTo({ top: 1175, behavior: 'smooth'});
-    }
-    function functionMove4() {
-      navArray[4].href="#4"
-          window.scrollTo({ top: 2223, behavior: 'smooth'});
-    }
-    function functionMove5() {
-      navArray[5].href="#5"
-          window.scrollTo({ top: 2948, behavior: 'smooth'});
-    }
+    function modifColor(index, bg, text) {
+      for (i = 0; i < navArray.length; i++) {
+        navArray[i].style.backgroundColor = "";
+        navArray[i].style.Color = "";
+      }
+      navArray[index].style.backgroundColor = bg;
+      navArray[index].style.Color = text;
+      navArray[index].style.borderRadius = "10px";
 
+    }
+    navArray[0].addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+      modifColor(0, "grey", "black");
+    });
+
+    navArray[1].addEventListener("click", function (e) {
+      navArray[1].href = "#1"
+      window.scrollTo({
+        top: 100,
+        behavior: 'smooth'
+      });
+      modifColor(1, "orange", "black");
+    });
+
+    navArray[2].addEventListener("click", function (e) {
+      navArray[2].href = "#2"
+      window.scrollTo({
+        top: 678,
+        behavior: 'smooth'
+      });
+      modifColor(2, "red", "black");
+    });
+    navArray[3].addEventListener("click", function (e) {
+      navArray[3].href = "#3"
+      window.scrollTo({
+        top: 1175,
+        behavior: 'smooth'
+      });
+      modifColor(3, "lightblue", "black");
+    });
+    navArray[4].addEventListener("click", function (e) {
+      navArray[4].href = "#4"
+      window.scrollTo({
+        top: 2223,
+        behavior: 'smooth'
+      });
+      modifColor(4, "lightgreen", "black");
+    });
+    navArray[5].addEventListener("click", function (e) {
+      navArray[5].href = "#5"
+      window.scrollTo({
+        top: 2948,
+        behavior: 'smooth'
+      });
+      modifColor(5, "pink", "black");
+    });
   </script>
 </body>
 
