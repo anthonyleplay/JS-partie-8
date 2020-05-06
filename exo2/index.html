@@ -225,9 +225,39 @@
 
 
   <script>
+    var navArray = document.getElementsByTagName("a");
+    console.log(document.documentElement.scrollTop)
+    navArray[0].addEventListener("click",  functionMove0);
+    navArray[1].addEventListener("click",  functionMove1);
+    navArray[2].addEventListener("click",  functionMove2);
+    navArray[3].addEventListener("click",  functionMove3);
+    navArray[4].addEventListener("click",  functionMove4);
+    navArray[5].addEventListener("click",  functionMove5);
 
-
-
+    function functionMove0() {
+          navArray[0].href="#0"
+          window.scrollTo({ top: 0, behavior: 'smooth'});
+    }
+    function functionMove1() {
+      navArray[1].href="#1"
+          window.scrollTo({ top: 100, behavior: 'smooth'});
+    }
+    function functionMove2() {
+      navArray[2].href="#2"
+          window.scrollTo({ top: 678, behavior: 'smooth'});
+          }
+    function functionMove3() {
+      navArray[3].href="#3"
+          window.scrollTo({ top: 1175, behavior: 'smooth'});
+    }
+    function functionMove4() {
+      navArray[4].href="#4"
+          window.scrollTo({ top: 2223, behavior: 'smooth'});
+    }
+    function functionMove5() {
+      navArray[5].href="#5"
+          window.scrollTo({ top: 2948, behavior: 'smooth'});
+    }
 
   </script>
 </body>
